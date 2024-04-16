@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(170deg, #0090AE 25%, #0090AE 45%, #ffffff 15%);
+    background-repeat: no-repeat;
+    max-height: 100vh;
+}
+
+header {
+    margin-top: 5vh;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    height: 45vh;
+    width: 40vw;
+}
+
+.photo-card > img {
+    width: 20vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 24%;
+    top: 63%;
+}
+
+.about-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 24px;
+    padding-left: 12px;
+}
+
+.about-lorem {
+    line-height: 25px;
+    padding: 12px;
+    font-size: 1.25rem;
+    opacity: 0.7;
+    margin-top: 24px;
+}
+
+.social {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 128px;
+    margin-right: 24px;
+    gap: 12px;
+}
+
+.linkedin, .github{
+    height: 48px;
+    width: 48px;
+    transition: transform .5s;
+}
+
+.linkedin:hover, .github:hover {
+    transform: scale(1.1);
+}
+
+main {
+    margin-top: 48px;
+    padding: 24px;
+}
+
+.work {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 24px 18px
+}
+
+.project-card {
+    height: 40vh;
+    width: 30vw;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.battleship {
+    border-radius: 10px 10px 0 0;
+    height: 30vh;
+    width: 30vw;
+    object-fit: cover;
+}
+
+.proj-n-share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.description {
+    padding: 0 10px;
+    opacity: 0.8;
+}
+
+.sec-github, .share {
+    height: 32px;
+    width: 32px;
+    transition: transform .5s;
+}
+
+.share:hover, .sec-github:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 48px;
+    background-color: #0090AE;
+    display: flex;
+    justify-content: center;
+    gap: 128px;
+    padding: 24px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 15vw;
+    color:white;
+}
+
+.contact-me {
+    font-size: 1.5rem;
+}
+
+.social-contacts {
+    display: flex;
+    gap: 16px;
+}
+
+.sec-linkedin {
+    height: 32px;
+    width: 32px;
+    transition: transform .5s;
+}
+
+.sec-linkedin:hover {
+    transform: scale(1.1);
+}
+
+.img-end {
+    width: 25vw;
+    height: 35vh;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px){
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        display: block;
+        align-items: center;
+        position: relative;
+    }
+    .card > img {
+        position: relative;
+        float: left;
+        top: -2vh;
+        left: -3vh;
+        height: 30vh;
+        width: 25vw;
+        z-index: 1;
+        margin-right: -2vh;
+        margin-bottom: -2vh;
+    }
+    .name {
+        position: absolute;
+        top: -25px;
+        left: 10vw;
+        z-index: 2;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .project-card, .battleship {
+        width: 47vw;
+    }
+    .contacts {
+        padding-top: 48px;
+        font-size: 1.25rem;
+        width: 225px;
+    }
+    .social {
+        display: none;
+    }
+    .contact-me {
+        font-size: 2rem;
+    }
+    .img-end {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .card > img {
+        float: none;
+        width: 90vw;
+    }
+    .name {
+        position: absolute;
+        top: 24vh;
+    }
+    .about {
+        width: 90vw;
+        height: 35vh;
+        display: block;
+    }
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .work {
+        padding-left: 1vh;
+    }
+    .social {
+        display: flex;
+        margin-top: 12px;
+        justify-content: center;
+    }
+    .project-card, .battleship {
+        width: 90vw;
+    }
+    .project-card {
+        height: 40vh;
+    }
+    footer {
+        display: block;
+        padding: 0;
+    }
+    .contacts {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .img-end {
+        width: 100vw;
+        height: 40vh;
+    }
+}
+
+@media (max-width: 360px) {
+    .about {
+        height: 50vh;
+    }
+    .project-card {
+        height: 45vh;
+    }
+}
+
