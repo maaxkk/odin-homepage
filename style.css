@@ -27,7 +27,7 @@ header {
     width: 40vw;
 }
 
-.photo-card > img {
+.card > img {
     width: 20vw;
     height: 50vh;
     object-fit: cover;
@@ -39,7 +39,7 @@ header {
     color: white;
     position: absolute;
     left: 24%;
-    top: 63%;
+    top: 50%;
 }
 
 .about-text {
@@ -172,7 +172,7 @@ footer {
     object-fit: cover;
 }
 
-@media (max-width: 1024px){
+@media (min-width: 650px) and (max-width: 1024px){
     .wrapper {
         display: flex;
         justify-content: center;
@@ -224,20 +224,25 @@ footer {
     }
 }
 
-@media (max-width: 450px) {
-
+@media (min-width: 360px) and (max-width: 450px) {
     .card > img {
-        float: none;
         width: 90vw;
+    }
+    .card {
+        display: block;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .name {
         position: absolute;
-        top: 24vh;
+        top: 50vh;
     }
     .about {
         width: 90vw;
         height: 35vh;
-        display: block;
     }
     .projects {
         display: flex;
